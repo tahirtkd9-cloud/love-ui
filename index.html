@@ -1,91 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Do You Love Me?</title>
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin-top: 100px;
+        }
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+        img {
+            width: 200px;
+            margin: 10px;
+        }
 
-img {
-    width: 90%;
-    max-width: 400px;
-    margin-bottom: 20px;
-}
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
 
-button {
-    padding: 12px 35px;
-    font-size: 18px;
-    border: none;
-    border-radius: 6px;
-    margin: 10px;
-    cursor: pointer;
-}
+        .yes {
+            background-color: green;
+            color: white;
+        }
 
-#yes {
-    background: #4CAF50;
-    color: white;
-}
-
-#no {
-    background: #e74c3c;
-    color: white;
-    position: relative;
-}
-
-#message {
-    margin-top: 20px;
-    font-size: 22px;
-    font-weight: bold;
-}
-</style>
+        .no {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
 
-<img src="love.png">
+    <h2>POV: DO YOU LOVE ME? 😍😁</h2>
 
-<div>
-    <button id="yes">Yes</button>
-    <button id="no">No</button>
-</div>
+    <!-- Image (root folder me honi chahiye) -->
+    <img src="love.png" alt="Love Image">
 
-<p id="message"></p>
+    <br>
 
-<script>
-const yes = document.getElementById("yes");
-const no = document.getElementById("no");
-const message = document.getElementById("message");
-
-function moveNo() {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
-
-    no.style.position = "absolute";
-    no.style.left = x + "px";
-    no.style.top = y + "px";
-}
-
-no.addEventListener("mouseover", moveNo);
-no.addEventListener("touchstart", moveNo);
-
-yes.addEventListener("click", () => {
-    message.innerHTML = "Yes I Love You ❤️";
-});
-</script>
+    <button class="yes" onclick="alert('I Love You Too ❤️')">Yes</button>
+    <button class="no" onclick="alert('Aww 😢')">No</button>
 
 </body>
-</html></body>
 </html>
