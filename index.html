@@ -8,11 +8,12 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin-top: 100px;
+            overflow: hidden;
         }
 
         img {
             width: 200px;
-            margin: 10px;
+            margin: 15px;
         }
 
         button {
@@ -22,16 +23,18 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 10px;
+            position: relative;
         }
 
-        .yes {
+        #yesBtn {
             background-color: green;
             color: white;
         }
 
-        .no {
+        #noBtn {
             background-color: red;
             color: white;
+            position: absolute;
         }
     </style>
 </head>
@@ -39,13 +42,29 @@
 
     <h2>POV: DO YOU LOVE ME? 😍😁</h2>
 
-    <!-- Image (root folder me honi chahiye) -->
     <img src="love.png" alt="Love Image">
 
     <br>
 
-    <button class="yes" onclick="alert('I Love You Too ❤️')">Yes</button>
-    <button class="no" onclick="alert('Aww 😢')">No</button>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+
+        yesBtn.addEventListener("click", function() {
+            alert("I Love You Too ❤️");
+        });
+
+        noBtn.addEventListener("mouseover", function() {
+            const x = Math.random() * window.innerWidth - 100;
+            const y = Math.random() * window.innerHeight - 50;
+
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+    </script>
 
 </body>
 </html>
