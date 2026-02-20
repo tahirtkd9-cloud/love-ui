@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Do You Love Me?</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do You Love Me?</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7"
-         class="love-img"
-         alt="love">
+<h2>POV: DO YOU LOVE ME ? 😍😁</h2>
 
-    <h1>Do You Love Me? ❤️</h1>
-
-    <div class="buttons">
-        <button id="yes">Yes 💖</button>
-        <button id="no">No 😢</button>
-    </div>
-
-    <p id="message"></p>
+<div class="image-container">
+    <img src="https://i.imgur.com/6R8sK8P.png" class="bear">
+    <img src="https://i.imgur.com/9Yj6R9C.png" class="bear">
 </div>
+
+<div class="buttons">
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+</div>
+
+<p id="message"></p>
 
 <script>
 const yesBtn = document.getElementById("yes");
 const noBtn = document.getElementById("no");
 const message = document.getElementById("message");
 
-noBtn.addEventListener("mouseover", () => {
+// Mobile + Desktop support
+function moveNoButton() {
     const x = Math.random() * (window.innerWidth - 100);
     const y = Math.random() * (window.innerHeight - 50);
 
     noBtn.style.position = "absolute";
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
-});
+}
+
+noBtn.addEventListener("mouseover", moveNoButton);
+noBtn.addEventListener("touchstart", moveNoButton);
 
 yesBtn.addEventListener("click", () => {
-    message.innerHTML = "I knew it! 😍 You love me ❤️";
+    message.innerHTML = "Yes I Love You ❤️";
     message.style.fontSize = "22px";
 });
 </script>
