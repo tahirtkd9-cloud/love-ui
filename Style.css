@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff2e63;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+#yes {
+    background-color: #28a745;
+    color: white;
+}
+
+#yes:hover {
+    background-color: #218838;
+}
+
+#no {
+    background-color: #dc3545;
+    color: white;
+}
+
+#no:hover {
+    background-color: #c82333;
+}
+
+#message {
+    margin-top: 20px;
+    color: #333;
+}
